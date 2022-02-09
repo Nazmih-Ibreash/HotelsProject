@@ -1,0 +1,12 @@
+{
+  "ConnectionStrings": {
+    "HotelContextDb": "Data Source=(localdb)\\ProjectModels;Database=HotelsDb;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=true"
+    //"DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=_CHANGE_ME;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+  /*"Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft":  "Warning"HotelsDb
+    }
+  }*/
+}

@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewBag.Title</title>
+     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/fortawesome/fontawesome-free/css/all.min.css" />
     <link rel="icon" href="https://img.icons8.com/office/16/000000/5-star-hotel.png"/>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
   
@@ -13,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-controller="App" asp-action="Index">Hotels</a>
+                Hotels
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,14 +33,7 @@
                 </div>
             </div>
         </nav>
-        <div class="row container">
-            <div class="col-4-md">
-                <img src="https://img.icons8.com/office/40/000000/5-star-hotel.png"/>
-            </div>
-            <div class="col-6-md">
-                <h3>Book Your Favourite Hotle</h3>
-            </div>
-        </div>
+     
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -52,7 +47,7 @@
         </div>
     </footer>
     <script src="lib/jquery/dist/jquery.min.js"></script>
-    <script src="js/js.index"></script>
+    <script src="~/js/index.js"></script>
     </body>
     </html>
 

@@ -1,14 +1,28 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hotels.Data;
+using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace Hotels.Controllers
 {
     public class AppController : Controller
     {
-        public IActionResult Index()
+        private readonly IHotelRepo _repo;
+        public AppController(IHotelRepo repo)
         {
-            return View();
+            _repo = repo;
         }
-        public IActionResult Search()
+        public IActionResult Index(string search)
+        {
+            if (string.IsNullOrEmpty(search))
+            {
+                return View(_repo.GetAllHotels());
+            }
+            else
+            {
+                return View(_repo.GetHotelsByCategory(search));
+            }
+        }
+            public IActionResult Search()
         {
             return View();
         }

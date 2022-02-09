@@ -1,4 +1,4 @@
-﻿namespace Hotels.Daata.Entities
+﻿namespace Hotels.Data.Entities
 {
     public class Place
     {
