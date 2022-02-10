@@ -18,10 +18,10 @@ namespace Hotels
         {
             var host = CreateHostBuilder(args).Build();
 
-            if (args.Length== 1 && args[0].ToLower() == "/seed")
+            if (args.Length > 0 && args[0] == "/seed")
             {
                 RunSeeding(host);
-
+                return;
             }
             else
             {
@@ -35,7 +35,7 @@ namespace Hotels
            var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
            using (var scope = scopeFactory.CreateScope())
             {
-                var seeder = host.Services.GetService<HotelSeeder>();
+                var seeder = scope.ServiceProvider.GetService<HotelSeeder>();
                 seeder.seed();
             }
            

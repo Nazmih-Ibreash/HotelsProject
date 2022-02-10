@@ -11,7 +11,7 @@ namespace Hotels.Data
         {
             _config = config;
         }
-        public DbSet<Place> Hotels { get; set; }
+        public DbSet<Hotel> Hotels { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_config["ConnectionStrings:HotelContextDb"]);

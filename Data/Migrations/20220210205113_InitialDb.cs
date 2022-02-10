@@ -12,11 +12,11 @@ namespace Hotels.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "varchar(45)", nullable: true),
                     Stars = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(4,2)", nullable: false),
                     Img = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>

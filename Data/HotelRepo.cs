@@ -14,21 +14,27 @@ namespace Hotels.Data
             _ctx = ctx;
         }
 
-        public IEnumerable<Place> GetAllHotels()
+        public IEnumerable<Hotel> GetAllHotels()
         {
             return _ctx.Hotels
-                .OrderBy(prop => prop.Title).ToList<Place>();
+                .OrderBy(prop => prop.Title).ToList<Hotel>();
         }
 
-        public IEnumerable<Place> GetHotelsByCategory(string search)
+        public IEnumerable<Hotel> GetHotelsByCategory(string search)
         {
             return _ctx.Hotels
-                    .Where(p => p.Category == search);
+                    .Where(p => p.City.ToLower() == search.ToLower());
             /* 
             from p in _ctx.Hotels
                    where p.Category == search
                    select p;
-            */
+            */  
+        }
+
+        public Hotel GetHotelById(Hotel hotel)
+        {
+            return (Hotel)_ctx.Hotels
+                    .Where(p => p.City == hotel.City);
         }
 
         public bool SaveChanges()
@@ -36,5 +42,6 @@ namespace Hotels.Data
             return _ctx.SaveChanges() > 0;
         }
 
+   
     }
 }

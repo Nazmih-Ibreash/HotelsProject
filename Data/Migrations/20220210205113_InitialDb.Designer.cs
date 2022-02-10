@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotels.Migrations
 {
     [DbContext(typeof(HotelContext))]
-    [Migration("20220209101309_InitialDb")]
+    [Migration("20220210205113_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,15 +20,15 @@ namespace Hotels.Migrations
                 .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Hotels.Data.Entities.Place", b =>
+            modelBuilder.Entity("Hotels.Data.Entities.Hotel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Category")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("City")
+                        .HasColumnType("varchar(45)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -37,7 +37,7 @@ namespace Hotels.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(4,2)");
 
                     b.Property<int>("Stars")
                         .HasColumnType("int");

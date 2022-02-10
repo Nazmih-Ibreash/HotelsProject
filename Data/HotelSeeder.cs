@@ -26,7 +26,7 @@ namespace Hotels.Data
             {
                 var filePath = Path.Combine(_env.ContentRootPath, "Data/data.json");
                 var json = File.ReadAllText(filePath);
-                var places = JsonSerializer.Deserialize<IEnumerable<Place>>(json);
+                var places = JsonSerializer.Deserialize<IEnumerable<Hotel>>(json);
 
                 _context.Hotels.AddRange(places);
 

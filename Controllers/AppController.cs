@@ -1,5 +1,7 @@
 ﻿using Hotels.Data;
+using Hotels.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Hotels.Controllers
@@ -22,9 +24,25 @@ namespace Hotels.Controllers
                 return View(_repo.GetHotelsByCategory(search));
             }
         }
-            public IActionResult Search()
+
+        public IActionResult Booked(Hotel bookedItem)
+        {
+            if (ModelState.IsValid)
+            {
+                return View(_repo.GetHotelById(bookedItem));
+                //ModelState.Clear();
+            }
+            else
+            {
+                return RedirectToAction("Index");
+               // return View(_repo.GetHotelsByCategory(bookedItem));
+            }
+        }
+        /*
+        public IActionResult Booked()
         {
             return View();
         }
+        */
     }
 }

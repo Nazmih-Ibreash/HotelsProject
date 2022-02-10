@@ -5,8 +5,9 @@ namespace Hotels.Data
 {
     public interface IHotelRepo
     {
-        IEnumerable<Place> GetAllHotels();
-        IEnumerable<Place> GetHotelsByCategory(string category);
+        IEnumerable<Hotel> GetAllHotels();
+        IEnumerable<Hotel> GetHotelsByCategory(string category);
         bool SaveChanges();
+        Hotel GetHotelById(Hotel hotel);
     }
 }
