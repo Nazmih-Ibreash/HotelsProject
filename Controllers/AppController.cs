@@ -24,7 +24,7 @@ namespace Hotels.Controllers
                 return View(_repo.GetHotelsByCategory(search));
             }
         }
-
+        /*
         public IActionResult Booked(Hotel bookedItem)
         {
             if (ModelState.IsValid)
@@ -37,7 +37,7 @@ namespace Hotels.Controllers
                 return RedirectToAction("Index");
                // return View(_repo.GetHotelsByCategory(bookedItem));
             }
-        }
+        }*/
         /*
         public IActionResult Booked()
         {

@@ -36,7 +36,12 @@ namespace Hotels.Controllers
                 {
                     Id = h.Id,
                     Name = h.Title,
-                    NoOfStars= h.Stars
+                    NoOfStars= h.Stars,
+                    City = h.City,
+                    Price= h.Price, 
+                    Img= h.Img,
+                    Description= h.Description
+
                 });
                 return Ok(hotelsResponse);
             }
@@ -46,6 +51,44 @@ namespace Hotels.Controllers
                 return BadRequest("Failed to get hotels");
             }
             
+        }
+
+        [HttpGet("{id:int}")]
+        public IActionResult Get(int id)
+        {
+            try
+            {
+                var hotel = _repo.GetHotelById(id);
+
+                if (hotel != null) return Ok(hotel);
+                else return NotFound();
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get hotels: {ex}");
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody]Hotel model)
+        {
+            try
+            {
+                _repo.AddEntity(model);
+                if (_repo.SaveChanges())
+                {
+                    return Created($"/api/hotels/{model.Id}", model);
+                }
+            
+            }
+            catch(Exception ex)
+            {
+
+                _logger.LogError("Failed to add new hotel");
+            }
+            return BadRequest("Failed to add new hotel");
         }
     }
 }

@@ -23,18 +23,13 @@ namespace Hotels.Data
         public IEnumerable<Hotel> GetHotelsByCategory(string search)
         {
             return _ctx.Hotels
-                    .Where(p => p.City.ToLower() == search.ToLower());
-            /* 
-            from p in _ctx.Hotels
-                   where p.Category == search
-                   select p;
-            */  
+                    .Where(p => p.City.ToLower().Contains(search.ToLower()));
         }
 
-        public Hotel GetHotelById(Hotel hotel)
+        public Hotel GetHotelById(int id)
         {
-            return (Hotel)_ctx.Hotels
-                    .Where(p => p.City == hotel.City);
+            return _ctx.Hotels.Where(h => h.Id == id)
+                .FirstOrDefault();
         }
 
         public bool SaveChanges()
@@ -42,6 +37,9 @@ namespace Hotels.Data
             return _ctx.SaveChanges() > 0;
         }
 
-   
+        public void AddEntity(object model)
+        {
+            _ctx.Add(model);
+        }
     }
 }

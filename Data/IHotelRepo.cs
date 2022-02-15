@@ -7,7 +7,8 @@ namespace Hotels.Data
     {
         IEnumerable<Hotel> GetAllHotels();
         IEnumerable<Hotel> GetHotelsByCategory(string category);
+        Hotel GetHotelById(int id);
         bool SaveChanges();
-        Hotel GetHotelById(Hotel hotel);
+        void AddEntity(object model);
     }
 }
