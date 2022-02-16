@@ -86,7 +86,7 @@ namespace Hotels.Controllers
             catch(Exception ex)
             {
 
-                _logger.LogError("Failed to add new hotel");
+                _logger.LogError($"Failed to add new hotel: {ex}");
             }
             return BadRequest("Failed to add new hotel");
         }

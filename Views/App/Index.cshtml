@@ -1,6 +1,15 @@
 ﻿@using Hotels.Data.Entities
-@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
 @model IEnumerable<Hotel>
+@section Scripts{
+    <script src="/client/polyfills.294bda16958ada30.js"></script>
+    <script src="/client/runtime.01fec06f14767966.js"></script>
+    <script src="/client/main.d1a8b77888d7374a.js" asp-append-version="true"></script>
+}
+@section head {
+    <link href="/client/styles.ef46db3751d8e999.css" rel="stylesheet"/>
+}
+<show-hotels></show-hotels>
+@*
 @{
     ViewBag.Title = "Home Page";
 }
@@ -54,6 +63,8 @@
         </div>
     </div>
     }
+
     </div>
 </div>
+*@
 
