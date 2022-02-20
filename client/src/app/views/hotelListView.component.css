@@ -1,0 +1,15 @@
+﻿.hotel-img{
+    border: 1px #ddd solid;
+    box-shadow: rgba(0,0,0,.4) 2px 2px;
+    margin: 2px;
+}
+
+.products-props{
+    font-size: .9rem;
+}
+
+ngb-rating {
+    font-size: 100px;
+    color: brown;
+    background: rgba(23, 221, 16, 0.815);
+}

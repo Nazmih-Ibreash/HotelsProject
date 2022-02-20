@@ -1,4 +1,4 @@
-﻿export class Hotels {
+﻿export class BookedHotel {
     id!: number;
     name!: string;
     stars!: number;
@@ -6,4 +6,6 @@
     description!: string;
     price!: number;
     img!: string;
+    quantity!: number;
+
 }

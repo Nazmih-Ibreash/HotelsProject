@@ -1,0 +1,35 @@
+﻿<h3>Cart</h3>
+<div>Count: {{ hotelService.bookedHotels.length }}</div>
+<table class="table table-condensed table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Hotel</th>
+            <th>Persons</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of hotelService.bookedHotels">
+            <td>
+                <img src="/img/{{item.img}}" alt="{{item.name}}" 
+                     class="img-fluid img-thumb" />
+            </td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price | currency }}</td>
+            <td>{{ item.price * item.quantity | currency }}</td>
+        </tr>
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>SubTotal: {{ hotelService.total | currency }}</td>
+        </tr>
+    </tfoot>
+
+</table>
+
+<a class="btn btn-success" *ngIf="hotelService.bookedHotels.length > 0" routerLink="checkout">Checkout</a>
+<hr />

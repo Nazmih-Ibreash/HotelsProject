@@ -6,14 +6,18 @@ import { Hotels } from "../shared/Hotel";
 
 @Component({
     selector: "hotel-list",
-    templateUrl: "hotelListView.component.html"
+    templateUrl: "hotelListView.component.html",
+    styleUrls: ["hotelListView.component.css"]
 })
 export default class HotelListView implements OnInit {
     public hotels: Hotels[] = [];
+    public _searchFilter: string = "";
+    public filteredHotels: Hotels[] = [];
 
-    constructor(private hotelService: HotelService) {
+    constructor(public hotelService: HotelService) {
         this.hotels = hotelService.hotels;
-    }
+        this.filteredHotels = this.hotels;
+    } 
 
     ngOnInit(): void {
         this.hotelService.getHotels().subscribe();

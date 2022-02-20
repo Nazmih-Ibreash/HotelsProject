@@ -1,0 +1,34 @@
+﻿
+<div class="row">
+<h3>Confirm Order</h3>
+<table class="table table-bordered table-hover">
+<tr *ngFor="let o of hotelService.bookedHotels">
+    <td><img src="/img/{{ o.img }}" alt="o.name" class="img-thumbnail checkout-thumb" /></td>
+    <td>{{ o.name }}({{ o.city }})</td>
+    <td>{{ o.quantity }}</td>
+    <td>{{ o.price|currency}}</td>
+    <td>{{ (o.price * o.quantity)|currency }}</td>
+</tr>
+</table>
+<div class="col-md-4 col-md-offset-8 text-right">
+<table class="table table-condensed">
+    <tr>
+    <td class="text-right">Subtotal</td>
+    <td class="text-right">{{ hotelService.total|currency}}</td>
+    </tr>
+    <tr>
+    <td class="text-right">Shipping</td>
+    <td class="text-right">$ 0.00</td>
+    </tr>
+    <tr>
+    <td class="text-right">Total:</td>
+    <td class="text-right">{{ hotelService.total|currency}}</td>
+    </tr>
+</table>
+<button class="btn btn-success" (click)="onCheckout()">Complete Purchase</button>
+<a routerLink="/" class="btn btn-info">Cancel</a>
+</div>
+
+</div>
+
+

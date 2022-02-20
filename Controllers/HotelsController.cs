@@ -36,7 +36,7 @@ namespace Hotels.Controllers
                 {
                     Id = h.Id,
                     Name = h.Title,
-                    NoOfStars= h.Stars,
+                    Stars = h.Stars,
                     City = h.City,
                     Price= h.Price, 
                     Img= h.Img,

@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int NoOfStars { get; set; }
+        public int Stars { get; set; }
         //return other needed fields
         public string City { get; set; }
         public string Description { get; set; }
