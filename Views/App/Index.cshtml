@@ -3,69 +3,12 @@
 @section Scripts{
     <script src="/client/polyfills.294bda16958ada30.js"></script>
     <script src="/client/runtime.01fec06f14767966.js"></script>
-    <script src="/client/main.66bcb4cfd5aa7003.js" ></script>
+    <script src="/client/main.c13acbcc0bc71586.js" ></script>
 }
 @section head {
     <base href="/App/Index" />
     <link href="/client/styles.3a742c584ee9b9b1.css" rel="stylesheet"/>
 }
 <show-hotels></show-hotels>
-@*
-@{
-    ViewBag.Title = "Home Page";
-}
-<div class="container">
-    <div class="row container">
-        <div class="col-4-md">
-            <img src="https://img.icons8.com/office/40/000000/5-star-hotel.png"/>
-        </div>
-        <div class="col-6-md">
-            <h3>Book Your Favourite Hotle</h3>
-        </div>
-    </div>
-    <p>Count: @Model.Count()</p>
-</div>
 
-<div class="container" style="margin-bottom:10px">
-    <nav class="navbar navbar-light bg-light">
-      <form  asp-action="Index" method="get" class="form-inline">
-          <div class="form-group">
-       <p>
-            input place <input type="text" name="Search" value="" /> 
-            <input type="submit" value="Search" class="btn btn-info"  /> |
-            <a asp-action="Index" > Remove filter</a>
-        </p>
-          </div>
-
-      </form>
-    </nav>
-</div>
-
-<div class="container">
-    <div class="row" style="height: 650px; margin-bottom:10px ">
-
-    @foreach (var p in Model )
-    {
-    <div class="col-md-6" style="height: 650px; margin-bottom:10px ">
-        <div class=" border bg-light rounded p-1">
-            <img src="~/img/@(p.Img)" class="img-fluid w-100 p-3" style="height: 350px " alt="@p.Title" />
-            <ul class="product-props">
-                <li class="font-weight-bold">@p.Title - @p.City </li>
-                
-                <li>Description: @p.Description</li>
-                <li>Price: $@p.Price</li>
-            </ul>
-            <form asp-action="Booked" method="get">
-                <div class="form-group">
-                    <button type="submit" name="Book" value="Book" class="btn btn-success">Book Now!</button>
-                </div>
-            </form>
-            
-        </div>
-    </div>
-    }
-
-    </div>
-</div>
-*@
 

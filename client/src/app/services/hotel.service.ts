@@ -14,8 +14,6 @@ export class HotelService {
     public hotels: Hotels[] = [];
     public bookedHotels: BookedHotel[] = [];
     public total: number = 0;
-
-    public _searchFilter: string = "";
     public filteredHotels: Hotels[] = [];
 
     getHotels(): Observable<any> {
@@ -51,7 +49,7 @@ export class HotelService {
             this.bookedHotels.push(item);
         }
     }
-
+    public _searchFilter: string = "";
     public get searchFilter(): string {
         return this._searchFilter;
     }

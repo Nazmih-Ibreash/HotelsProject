@@ -7,11 +7,11 @@ import { HotelService } from "../services/hotel.service";
 })
 export class StarComponent implements OnChanges {
     @Input() rating!: number;
-    cropWidth: number = 75;
+    cropWidth: number = 100;
 
-    constructor(public hotelService: HotelService) {}
+    constructor() { }
 
     ngOnChanges(): void {
-        this.cropWidth = this.rating * 75 / 5;
+        this.cropWidth = this.rating * 100 / 5;
     }
 }

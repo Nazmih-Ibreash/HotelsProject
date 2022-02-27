@@ -10,16 +10,6 @@
     </div>
 
 </div>
-<!--
-<mat-form-field class="example-form-field" appearance="fill">
-    <mat-label>Filter</mat-label>
-    <input matInput type="text" [(ngModel)]="hotelService.searchFilter">
-    <button *ngIf="hotelService.searchFilter" matSuffix mat-icon-button aria-label="Clear" (click)="hotelService.searchFilter=''">
-        <mat-icon>close</mat-icon>
-    </button>
-</mat-form-field>
-
--->
 
 
 <div style="margin-bottom:10px">
@@ -34,18 +24,28 @@
 </div>
 
 
-<div class="row" style="height: 650px ">
-    <div *ngFor="let h of hotelService.filteredHotels" class="col-6" style="height: 600px;">
-        <div class="border bg-light rounded p-1" style="height: 580px; margin-bottom:10px ">
-            <img src="/img/{{h.img}}" class="img-fluid hotel-img" style="height: 250px; width:380px" alt="{{h.name}}" />
-            <h4>{{h.name}}</h4>
-            <pm-star [rating]='h.stars'></pm-star>
-            <p style="font-weight: bold">{{h.city}}</p>
-            <ul class="products-props">
-                <li>{{h.description}}</li>
-                <li>Price: {{h.price | currency }}</li>
-            </ul>
-            <button type="submit" id="buyButton" class="btn btn-success" (click)="hotelService.addBookedHotel(h)">Book Now!</button>
+<div class="row">
+    
+    <div *ngFor="let h of hotelService.filteredHotels">
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row  p-3 g-0">
+                <div class="col-md-4">
+                    <img src="/img/{{h.img}}" class="img-fluid rounded" alt="{{h.name}}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <div class="d-inline-block">
+                            <h5 class="card-title text-primary font-weight-bold">{{h.name}} </h5>
+                            <div>
+                                <pm-star [rating]='h.stars' style="font-size: 11px"></pm-star>
+                            </div>
+                        </div>  
+                        <p class="card-text" style="font-size: 12px">{{h.description}}</p>
+                        <p class="card-text"><small class="text-danger">{{h.price | currency }}</small></p>
+                        <button type="submit" id="buyButton" class="btn btn-primary btn-sm" (click)="hotelService.addBookedHotel(h)">Book</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
