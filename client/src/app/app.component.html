@@ -1,17 +1,7 @@
-﻿<!--
-    <nav class='navbar navbar-expand navbar-light bg-light'>
-    <a class='navbar-brand'>{{title}}</a>
-    <ul class='nav nav-pills'>
-        <li><a class='nav-link' routerLink='/hotel-list'>Home</a></li>
-        <li><a class='nav-link' routerLink='/checkout'>checkout</a></li>
-    </ul>
-</nav>
-
--->
-<div class="text-light">
-    <nav class="navbar navbar-expand-lg  py-3 fixed-top" style="background-color: #1A237E">
+﻿<div class=" text-white font-weight-bold">
+    <nav class="navbar navbar-expand-lg  py-3  navbar-dark" style="background-color: #1A237E">
         <div class="container">
-            <a href="#" class="navbar-brand">Booking.com</a>
+            <a href="#" class="navbar-brand font-weight-bold">Booking.com</a>
 
             <button class="navbar-toggler"
                     type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
@@ -20,14 +10,14 @@
 
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item" routerLink="/">
+                    <li class="nav-item border border-dark rounded-pill " routerLink="/">
                         <a href="" class="nav-link">Hotels</a>
                     </li>
-                    <li class="nav-item" routerLink="checkout">
-                        <a href="#questions" class="nav-link">Cart</a>
+                    <li class="nav-item border border-dark rounded-pill" routerLink="checkout">
+                        <a href="#" class="nav-link">Cart</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#instructors" class="nav-link">Team</a>
+                    <li class="nav-item border border-dark rounded-pill">
+                        <a href="#" class="nav-link">Team</a>
                     </li>
                 </ul>
             </div>
@@ -36,11 +26,15 @@
 </div>
 
 
-<div class="row">
-    
+
+<div class="row startBody">
     <div class="col-12">
-        <h3>{{title}}</h3>
+
         <router-outlet></router-outlet>
     </div>
-  
 </div>
+
+
+
+
+

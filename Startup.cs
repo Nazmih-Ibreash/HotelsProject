@@ -44,6 +44,8 @@ namespace Hotels
             app.UseStaticFiles();
             app.UseRouting();
 
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
@@ -51,6 +53,7 @@ namespace Hotels
                     "/{controller}/{action}/{id?}",
                     new { controller = "App", action = "Index", });
             });
+           
         }
     }
 }

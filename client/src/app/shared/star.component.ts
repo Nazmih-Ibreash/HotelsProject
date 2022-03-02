@@ -1,5 +1,5 @@
 ﻿import { Component, EventEmitter, Input, OnChanges } from "@angular/core";
-import { HotelService } from "../services/hotel.service";
+
 @Component({
     selector: 'pm-star',
     templateUrl: './star.component.html',

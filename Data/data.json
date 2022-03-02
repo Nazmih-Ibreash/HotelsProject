@@ -4,7 +4,7 @@
     "City": "Amman",
     "Stars": 5,
     "Title": "La Casa Hotel",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 89.99,
     "Img": "la-casa.jpg"
   },
@@ -12,8 +12,8 @@
     "Id": 0,
     "City": "Amman",
     "Stars": 4,
-    "Title": "InterContinental Jordan, an IHG Hotel",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Title": "InterContinental Jordan",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 65.75,
     "Img": "62057381.jpg"
   },
@@ -21,17 +21,17 @@
     "Id": 0,
     "City": "Amman",
     "Stars": 5,
-    "Title": "Sheraton Amman Al Nabil Hotel",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Title": "Sheraton Al Nabil Hotel",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 70.55,
-    "Img": "62057381.jpg"
+    "Img": "sheraton.jpg"
   },
   {
     "Id": 0,
     "City": "Dead Sea",
     "Stars": 5,
-    "Title": "Hilton Dead Sea Resort & Spa",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Title": "Hilton Resort & Spa",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 100.22,
     "Img": "helton.jpg"
   },
@@ -40,8 +40,8 @@
     "Id": 0,
     "City": "Dead Sea",
     "Stars": 5,
-    "Title": "Holiday Inn Resort Dead Sea",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Title": "Holiday Inn Resort",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 90.66,
     "Img": "holiday.jpg"
 
@@ -50,8 +50,8 @@
     "Id": 0,
     "City": "Dead Sea",
     "Stars": 5,
-    "Title": "Mövenpick Resort & Spa Dead Sea",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Title": "Mövenpick Resort & Spa",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 88.66,
     "Img": "movenpick.jpg"
   },
@@ -59,8 +59,8 @@
     "Id": 0,
     "City": "Aqaba",
     "Stars": 5,
-    "Title": "Al Manara, a Luxury Collection Hotel",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Title": "Al Manara",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 120.22,
     "Img": "manara.jpg"
   },
@@ -68,26 +68,26 @@
     "Id": 0,
     "City": "Aqaba",
     "Stars": 5,
-    "Title": "DoubleTree by Hilton Hotel Aqaba",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
-    "Price": 120.22,
+    "Title": "DoubleTree by Hilton",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
+    "Price": 125.62,
     "Img": "tree.jpg"
   },
   {
     "Id": 0,
     "City": "Aqaba",
     "Stars": 4,
-    "Title": "Hyatt Regency Aqaba Ayla Resort",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
-    "Price": 120.22,
+    "Title": "Hyatt Regency",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
+    "Price": 127.22,
     "Img": "regency.jpg"
   },
   {
     "Id": 0,
     "City": "Ajloun",
     "Stars": 2,
-    "Title": "Mountain Breeze Lodge & Resort",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Title": "Mountain Breeze",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 30.55,
     "Img": "resort.jpg"
   },
@@ -96,7 +96,7 @@
     "City": "Ajloun",
     "Stars": 3,
     "Title": "Ajloun Hotel",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 20.66,
     "Img": "ajloun.jpg"
   },
@@ -105,7 +105,7 @@
     "City": "Wadi Rum",
     "Stars": 5,
     "Title": "Wadi Rum Bubble Luxotel",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 70.55,
     "Img": "bubble.jpg"
   },
@@ -114,7 +114,7 @@
     "City": "Wadi Rum",
     "Stars": 3,
     "Title": "Hasan Zawaideh Camp",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 44.35,
     "Img": "angel.jpg"
   },
@@ -122,8 +122,8 @@
     "Id": 0,
     "City": "Wadi Rum",
     "Stars": 2,
-    "Title": "Rum AngelOpens in new window",
-    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting. Wasting no time, he tried it out in several self-portraits. He did this mostly to avoid having to pay for a model. Using rhythmic brushstrokes in striking colours, he portrayed himself here as a fashionably dressed Parisian.",
+    "Title": "Rum Angel",
+    "Description": "Vincent moved to Paris in 1886, after hearing from his brother Theo about the new, colourful style of French painting.",
     "Price": 20.63,
     "Img": "hasan.jpg"
   }

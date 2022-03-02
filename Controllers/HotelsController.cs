@@ -24,6 +24,8 @@ namespace Hotels.Controllers
             _logger = logger;
         }
 
+
+        [Route("")]
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -50,8 +52,8 @@ namespace Hotels.Controllers
                 _logger.LogError($"Failed to get hotels: {ex} ");
                 return BadRequest("Failed to get hotels");
             }
-            
         }
+        
 
         [HttpGet("{id:int}")]
         public IActionResult Get(int id)
@@ -60,7 +62,18 @@ namespace Hotels.Controllers
             {
                 var hotel = _repo.GetHotelById(id);
 
-                if (hotel != null) return Ok(hotel);
+                var hotelResponse = new SearchHotelResponse
+                {
+                    Id = hotel.Id,
+                    Name = hotel.Title,
+                    Stars = hotel.Stars,
+                    City = hotel.City,
+                    Price = hotel.Price,
+                    Img = hotel.Img,
+                    Description = hotel.Description
+                };
+
+                if (hotelResponse != null) return Ok(hotelResponse);
                 else return NotFound();
 
             }
@@ -71,6 +84,39 @@ namespace Hotels.Controllers
             }
         }
 
+        [Route("{search}")]
+        [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public ActionResult<IEnumerable<SearchHotelResponse>> Get(string search)
+        {
+            try
+            {
+                var hotels = _repo.GetHotelByName(search);
+
+                var hotelsResponse = hotels.Select(h => new SearchHotelResponse
+                {
+                    Id = h.Id,
+                    Name = h.Title,
+                    Stars = h.Stars,
+                    City = h.City,
+                    Price = h.Price,
+                    Img = h.Img,
+                    Description = h.Description
+                });
+
+                if (hotelsResponse != null) return Ok(hotelsResponse);
+                else return NotFound();
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get hotels: {ex}");
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [Route("")]
         [HttpPost]
         public IActionResult Post([FromBody]Hotel model)
         {

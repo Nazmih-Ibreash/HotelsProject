@@ -6,7 +6,7 @@ namespace Hotels.Data
     public interface IHotelRepo
     {
         IEnumerable<Hotel> GetAllHotels();
-        IEnumerable<Hotel> GetHotelsByCategory(string category);
+        IEnumerable<Hotel> GetHotelByName(string search);
         Hotel GetHotelById(int id);
         bool SaveChanges();
         void AddEntity(object model);
