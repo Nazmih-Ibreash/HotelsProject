@@ -19,7 +19,12 @@ namespace Hotels.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            var hotels = modelBuilder.Entity<Hotel>();
+            hotels.Property(h => h.City).HasColumnType("varchar(15)").IsRequired();
+            hotels.Property(h => h.Title).HasColumnType("varchar(40)").IsRequired();
+            hotels.Property(h => h.Description).HasColumnType("varchar(400)").IsRequired();
+            hotels.Property(h => h.Img).HasColumnType("varchar(50)").IsRequired();
+            hotels.Property(h => h.Stars).IsRequired();
         }
     }
 }
-//@"Server=(localdb)\mssqllocaldb;Database=Test"
