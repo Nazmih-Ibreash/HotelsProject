@@ -20,15 +20,16 @@ namespace Hotels.Data
                 .OrderBy(prop => prop.Title).ToList<Hotel>();
         }
 
-        public IEnumerable<Hotel> GetHotelByName(string search)
+        public IEnumerable<Hotel> SearchHotels(string search)
         {
             if (string.IsNullOrEmpty(search))
             {
                 return GetAllHotels();
             }
-            var resuts = _ctx.Hotels
-                    .Where(p => p.City.ToLower().Contains(search.ToLower()));
-            return resuts.ToList<Hotel>();
+            var results = _ctx.Hotels
+                    .Where(p => p.City.ToLower().Contains(search.ToLower()) || 
+                    p.Title.ToLower().Contains(search.ToLower()));
+            return results.ToList<Hotel>();
         }
 
         public Hotel GetHotelById(int id)

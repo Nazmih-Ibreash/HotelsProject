@@ -24,36 +24,39 @@ namespace Hotels.Controllers
             _logger = logger;
         }
 
-
         [Route("")]
+        [Route("{search}")]
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public ActionResult <IEnumerable<SearchHotelResponse>> Get()
+        public ActionResult<IEnumerable<SearchHotelResponse>> GetHotels(string search)
         {
             try
             {
-                var hotels = _repo.GetAllHotels();
+                var hotels = _repo.SearchHotels(search);
+
                 var hotelsResponse = hotels.Select(h => new SearchHotelResponse
                 {
                     Id = h.Id,
                     Name = h.Title,
                     Stars = h.Stars,
                     City = h.City,
-                    Price= h.Price, 
-                    Img= h.Img,
-                    Description= h.Description
-
+                    Price = h.Price,
+                    Img = h.Img,
+                    Description = h.Description
                 });
-                return Ok(hotelsResponse);
+
+                if (hotelsResponse != null) return Ok(hotelsResponse);
+                else return NotFound();
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                _logger.LogError($"Failed to get hotels: {ex} ");
-                return BadRequest("Failed to get hotels");
+                _logger.LogError($"Failed to get hotels: {ex}");
+                return BadRequest(ex.Message);
             }
         }
-        
+
 
         [HttpGet("{id:int}")]
         public IActionResult Get(int id)
@@ -84,37 +87,6 @@ namespace Hotels.Controllers
             }
         }
 
-        [Route("{search}")]
-        [HttpGet]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(400)]
-        public ActionResult<IEnumerable<SearchHotelResponse>> Get(string search)
-        {
-            try
-            {
-                var hotels = _repo.GetHotelByName(search);
-
-                var hotelsResponse = hotels.Select(h => new SearchHotelResponse
-                {
-                    Id = h.Id,
-                    Name = h.Title,
-                    Stars = h.Stars,
-                    City = h.City,
-                    Price = h.Price,
-                    Img = h.Img,
-                    Description = h.Description
-                });
-
-                if (hotelsResponse != null) return Ok(hotelsResponse);
-                else return NotFound();
-
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Failed to get hotels: {ex}");
-                return BadRequest(ex.Message);
-            }
-        }
 
         [Route("")]
         [HttpPost]
